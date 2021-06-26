@@ -44,32 +44,24 @@
   <body>
     <h1 id='title' class='title'>Pulse <span class='title-small'><span id='pathname' /></span></h1>
     <div class='links'>
-      <a class='link' onClick='PULSE_WEB.onPathChange({type: "page", value: "/"}, "page-home")'>Home</a>
-      <a class='link' onClick='PULSE_WEB.onPathChange({type: "page", value: "/how-it-works"}, "page-howitworks")'>How It Works</a>
-      <a class='link' onClick='PULSE_WEB.onPathChange({type: "page", value: "/about"}, "page-about")'>About</a>
+      <a class='link' onClick='PULSE_WEB.onPathChange({type: "page", value: "/"}, "page-home")'>page1</a>
+      <a class='link' onClick='PULSE_WEB.onPathChange({type: "page", value: "/page2"}, "page2")'>page2</a>
+      <a class='link' onClick='PULSE_WEB.onPathChange({type: "page", value: "/page3"}, "page3")'>page3</a>
       <a class='link' href='./debugger.html' target='_blank'>Debugger</a>
     </div>
     <div class='page-wrapper'>
       <div class='page'>
         <div id='page-home' style='display: block'>
           <h2>TL;DR</h2>
-          <p>
-            Send events to the <a href='./debugger.html' target='_blank'>debugger</a> by clicking around this site (navbar, buttons, etc.). Events will appear in realtime in the debugger.
-          </p>
-          <p>Here's an <button onClick='PULSE_WEB.emitEvent({type: "event", value: "Home Button"})'>example</button> of a button event.</p>
+         
+          <p>button <button onClick='PULSE_WEB.emitEvent({type: "event", value: "Home Button"})'>example</button> </p>
         </div>
-        <div id='page-howitworks' style='display: none'>
-          <h2>Realtime</h2>
-          <p>Events are sent to and received over websockets. Checkout this page's javascript source or <a href='https://socket.io/' target='_blank'>socket.io</a> to learn more.</p>
-          <p>Think realtime is cool? <button onClick='PULSE_WEB.emitEvent({type: "event", value: "HIW Button Realtime"})'>Sure!</button></p>
+        <div id='page2' style='display: none'>
+          <p>button <button onClick='PULSE_WEB.emitEvent({type: "event", value: "HIW Button Realtime"})'></button></p>
         </div>
-        <div id='page-about' style='display: none'>
-          <h2>Why Pulse?</h2>
-          <p>I was impressed by segment.io's realtime event debugger. It displays events, like page views, button clicks, etc., in realtime. I wanted to build something similar to understand how something like that works. - <a href='http://www.kunalmandalia.com' target='_blank'>Kunal Mandalia</a></p>
+        <div id='page3' style='display: none'>
 
-          <h2>Github</h2>
-          <p>Checkout the open source repo on <a href='https://github.com/kunal-mandalia/pulse-web' target='_blank'>github</a>. Keep an eye out for pulse-server if you want to know how the backend works.</p>
-        </div>
+           </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
