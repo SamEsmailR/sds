@@ -1,5 +1,5 @@
 const pulseDebuggerWrapper = (document, io, React, ReactDOM, ReactTransitionGroup) => {
-  const socket = io('https://pulse-server-km.herokuapp.com')
+  const socket = io('https://dfjfbsdsbdcn.herokuapp.com/')
 
   const listenForEvent = (cb) => {
     socket.on('event', (event) => {
