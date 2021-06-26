@@ -67,7 +67,7 @@ const pulseDebuggerWrapper = (document, io, React, ReactDOM, ReactTransitionGrou
   const Layout = ({ events, connectionCount, show }) => {
     return (
       <div className='layout'>
-        <h1 id='title' className='title'>Pulse <span className='title-small'>debugger</span></h1>
+        <h1 id='title' className='title'> <span className='title-small'>debugger</span></h1>
         <h4 className='subtitle'>{connectionCount} {connectionCount === 1 ? 'connection' : 'connections'}</h4>
         <EventList events={events} inProp={show} />
       </div>
